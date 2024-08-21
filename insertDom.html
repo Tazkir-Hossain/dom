@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 2px;
+        padding: 5px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>Explore Dom</h3>
+        <article id="first-article">
+          <h3>article-1</h3>
+          <p class="author">Hello world</p>
+          <p
+            title="I am the most important author"
+            class="description"
+            id="bestseller"
+          >
+            This is new bangladesh
+          </p>
+        </article>
+        <article>
+          <h3>article-2</h3>
+          <p class="author">Hello world</p>
+          <p class="description">This is new bangladesh</p>
+        </article>
+        <article>
+          <h3>article-3</h3>
+          <p class="author">Hello world</p>
+          <p class="description">This is new bangladesh</p>
+        </article>
+        <article>
+          <ul id="gift-list">
+            <li>gift item -1</li>
+            <li>gift item -2</li>
+            <li>gift item -3</li>
+            <li>gift item -4</li>
+            <li>gift item -5</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script>
+      const article = document.querySelector('#first-article');
+      const newParagraph = document.createElement('h3');
+      newParagraph.innerHTML = 'This is added by JavaScript';
+      article.appendChild(newParagraph);
+
+      const ul = document.querySelector('#gift-list');
+      const li = document.createElement('li');
+      li.innerHTML = 'gift item -6';
+      ul.appendChild(li);
+    </script>
+  </body>
+</html>
